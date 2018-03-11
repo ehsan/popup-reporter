@@ -10,9 +10,9 @@ Mozilla is experimenting with a popup blocker to dismiss them automatically, and
 Download
 --------
 
-![Firefox](https://upload.wikimedia.org/wikipedia/commons/6/67/Firefox_Logo%2C_2017.svg) [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/in-page-pop-up-reporter/)
+![Firefox](https://upload.wikimedia.org/wikipedia/commons/6/67/Firefox_Logo%2C_2017.svg =30x30) [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/in-page-pop-up-reporter/)
 
-![Chrome](https://upload.wikimedia.org/wikipedia/commons/e/e2/Google_Chrome_icon_%282011%29.svg) [Chrome extension](https://chrome.google.com/webstore/detail/in-page-pop-up-reporter/jglpdkeggihbgnclgfmjijhgpjaofilm)
+![Chrome](https://upload.wikimedia.org/wikipedia/commons/e/e2/Google_Chrome_icon_%282011%29.svg =30x30) [Chrome extension](https://chrome.google.com/webstore/detail/in-page-pop-up-reporter/jglpdkeggihbgnclgfmjijhgpjaofilm)
 
 Installation
 ------------
