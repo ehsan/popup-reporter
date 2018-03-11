@@ -1,6 +1,14 @@
 onload = function() {
     var urlField = document.getElementById("url");
-    browser.tabs.query({active:true, windowId:browser.windows.WINDOW_ID_CURRENT})
+    let options = {active: true};
+    browser.runtime.getPlatformInfo()
+      .then(info => info.os)
+      .then(os => {
+          if (os != "android") {
+              options.windowId = browser.windows.WINDOW_ID_CURRENT;
+          }
+          return browser.tabs.query(options);
+      })
       .then(tabs => {
           for (let tab of tabs) {
               return tab.url;
