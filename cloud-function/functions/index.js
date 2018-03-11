@@ -2,6 +2,7 @@ const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 const cors = require('cors')({origin:'*', methods:['POST']});
 const process = require('process');
+const moment = require('moment');
 
 admin.initializeApp(functions.config().firebase);
 const db = admin.database();
@@ -89,6 +90,7 @@ exports.appendRecordToSpreadsheet = functions.https.onRequest((req, res) => {
   let url = req.body.url;
   let desc = req.body.desc;
   let platform = req.body.platform;
+  let now = moment().format('M/D/YYYY H:m:s');
   return cors(req, res, () => {
     return appendPromise({
         spreadsheetId: SHEET_ID,
@@ -96,7 +98,7 @@ exports.appendRecordToSpreadsheet = functions.https.onRequest((req, res) => {
         valueInputOption: 'USER_ENTERED',
         insertDataOption: 'INSERT_ROWS',
         resource: {
-            values: [['=NOW()', url, desc, platform]]
+            values: [[now, url, desc, platform]]
         }
     }).then(res.status(200).send('OK'));
   });
