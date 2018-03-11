@@ -2,6 +2,8 @@ html {
     color: #181818;
     background: #ccc;
     font: menu;
+    font-size: 12pt;
+    width: 800px;
 }
 #wrapper {
     display: grid;

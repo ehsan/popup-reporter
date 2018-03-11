@@ -1,12 +1,24 @@
 const FUNCTIONS_SUBDOMAIN = 'us-central1-orbital-hawk-197700';
 
-browser.runtime.onMessage.addListener(notify);
+chrome.runtime.onMessage.addListener(notify);
+
+function getPlatformInfo() {
+    try {
+        return browser.runtime.getPlatformInfo();
+    } catch (e) {
+        return new Promise((resolve, reject) => {
+            chrome.runtime.getPlatformInfo(function(info) {
+                resolve(info);
+            });
+        });
+    }
+}
 
 function notify(message) {
     if (message.type != "fetch") {
         return;
     }
-    browser.runtime.getPlatformInfo()
+    getPlatformInfo()
       .then(info => info.os)
       .then(os => {
           let platform = (os == "android") ? "Mobile" : "Desktop";
@@ -30,6 +42,6 @@ function notify(message) {
           });
       })
       .then(response => response.text())
-      .then(() => browser.runtime.sendMessage({type: "success"}))
-      .catch(err => browser.runtime.sendMessage({type: "error", err: err}));
+      .then(() => chrome.runtime.sendMessage({type: "success"}))
+      .catch(err => chrome.runtime.sendMessage({type: "error", err: err}));
 }

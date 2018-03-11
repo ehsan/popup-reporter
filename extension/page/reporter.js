@@ -1,13 +1,37 @@
+function getPlatformInfo() {
+    try {
+        return browser.runtime.getPlatformInfo();
+    } catch (e) {
+        return new Promise((resolve, reject) => {
+            chrome.runtime.getPlatformInfo(function(info) {
+                resolve(info);
+            });
+        });
+    }
+}
+
+function queryTabs(options) {
+    try {
+        return browser.tabs.query(options);
+    } catch (e) {
+        return new Promise((resolve, reject) => {
+            chrome.tabs.query(options, function(tabs) {
+                resolve(tabs);
+            });
+        });
+    }
+}
+
 onload = function() {
     var urlField = document.getElementById("url");
     let options = {active: true};
-    browser.runtime.getPlatformInfo()
+    getPlatformInfo()
       .then(info => info.os)
       .then(os => {
           if (os != "android") {
-              options.windowId = browser.windows.WINDOW_ID_CURRENT;
+              options.windowId = chrome.windows.WINDOW_ID_CURRENT;
           }
-          return browser.tabs.query(options);
+          return queryTabs(options);
       })
       .then(tabs => {
           for (let tab of tabs) {
@@ -23,7 +47,7 @@ onload = function() {
     };
 };
 
-browser.runtime.onMessage.addListener(notify);
+chrome.runtime.onMessage.addListener(notify);
 
 function notify(message) {
     let status = document.getElementById("status");
@@ -48,5 +72,5 @@ function report() {
     let desc = document.querySelector("textarea");
     let status = document.getElementById("status");
     status.innerText = "Sending...";
-    browser.runtime.sendMessage({url: url.value, desc: desc.value, type:"fetch"});
+    chrome.runtime.sendMessage({url: url.value, desc: desc.value, type:"fetch"});
 }
