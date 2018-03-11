@@ -12,7 +12,7 @@ Download
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Firefox_Logo%2C_2017.svg" width="30" height="30"> [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/in-page-pop-up-reporter/)
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Google_Chrome_icon_%282011%29.svg" width="30" height="30"> [Chrome extension](https://chrome.google.com/webstore/detail/in-page-pop-up-reporter/jglpdkeggihbgnclgfmjijhgpjaofilm)
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Google_Chrome_icon_%282011%29.svg" width="30" height="30"> [Chrome extension](https://chrome.google.com/webstore/detail/in-page-pop-up-reporter/lccnlnedejboblgopogpeedohgfgjibf)
 
 Installation
 ------------
