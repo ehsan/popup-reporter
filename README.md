@@ -32,3 +32,7 @@ cd extension
 web-ext build
 ```
 Once the functions are deployed, you need to visit this URL in your browser to authenticate your spreadsheet access on the Google Cloud side to ensure the extension will have access to update the spreadsheet: https://`{YOUR-FUNCTIONS-SUBDOMAIN}`.cloudfunctions.net/authGoogleAPI.
+
+Acknowledgements
+----------------
+[This guide](https://medium.com/@elon.danziger/fast-flexible-and-free-visualizing-newborn-health-data-with-firebase-nodejs-and-google-sheets-1f73465a18bc) was used as a tutorial on how to talk to the Google Sheets API using Google Cloud functions.
