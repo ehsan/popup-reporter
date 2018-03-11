@@ -7,6 +7,13 @@ Are you tired of seeing in-page popups like this?
 
 Mozilla is experimenting with a popup blocker to dismiss them automatically, and are curating a dataset for it.  This extension provides an easy way to report pages that show pop-ups like this.
 
+Download
+--------
+
+![Firefox](https://upload.wikimedia.org/wikipedia/commons/6/67/Firefox_Logo%2C_2017.svg) [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/in-page-pop-up-reporter/)
+
+![Chrome](https://upload.wikimedia.org/wikipedia/commons/e/e2/Google_Chrome_icon_%282011%29.svg) [Chrome extension](https://chrome.google.com/webstore/detail/in-page-pop-up-reporter/jglpdkeggihbgnclgfmjijhgpjaofilm)
+
 Installation
 ------------
 
