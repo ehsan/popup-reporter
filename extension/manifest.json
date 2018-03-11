@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "In-Page Pop-up Reporter",
+    "version": "1.0",
+  
+    "description": "Help curate a data set of pages that open in-page pop-ups by reporting the URLs of such pages as you encounter them during your browsing.  Mozilla is experimenting with a browser feature to detect such pop-ups automatically and block them, and this data set will be used for training the system.",
+    "homepage_url": "https://github.com/ehsan/popup-reporter",
+    "icons": {
+      "16": "icons/icon.svg",
+      "24": "icons/icon.svg",
+      "32": "icons/icon.svg",
+      "64": "icons/icon.svg",
+      "128": "icons/icon.svg"
+    },
+  
+    "permissions": [
+      "activeTab"
+    ],
+  
+    "browser_action": {
+      "default_icon": "icons/icon.svg",
+      "default_title": "In-Page Pop-up Reporter",
+      "default_popup": "page/report.html"
+    },
+
+    "background": {
+      "scripts": ["background.js"]
+    }
+  
+  }

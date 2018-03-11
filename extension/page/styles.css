@@ -1,0 +1,22 @@
+html {
+    color: #181818;
+    background: #ccc;
+    font: menu;
+}
+#wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: 3em;
+}
+#wrapper header div {
+    margin: 1em auto;
+}
+header, article {
+    margin: 1em;
+}
+#url, textarea {
+    width: 100%;
+}
+footer {
+    font-size: 0.8em;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>In-Page Popup Reporter</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <h3>Are you tired of seeing in-page popups like this?</h3>
+                <div><img src="popup.jpg" width="373" height="249"></div>
+                Mozilla is experimenting with a popup blocker to dismiss them automatically, and are curating a dataset for it.
+                Help Mozilla by reporting pages that show pop-ups like this.
+            </header>
+
+            <article>
+                Address of the page showing the pop-up:<br>
+                <input type="text" id="url"><br>
+                What were you doing when you saw the pop-up (optional):<br>
+                <textarea rows="5"></textarea><br>
+                <input type="submit" value="Report"> <span id="status"></span>
+            </article>
+        </div>
+
+        <footer>
+            <div>Icon used for the extension made by <a href="https://www.flaticon.com/authors/smartline" title="Smartline">Smartline</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+        </footer>
+        <script src="reporter.js"></script>
+    </body>
+</html>
