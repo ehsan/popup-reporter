@@ -8,16 +8,16 @@
         <div id="wrapper">
             <header>
                 <h3>Are you tired of seeing in-page popups like this?</h3>
-                <div><img src="popup.jpg" width="373" height="249"></div>
+                <div><img src="popup.jpg" width="335" height="224"></div>
                 Mozilla is experimenting with a popup blocker to dismiss them automatically, and are curating a dataset for it.
                 Help Mozilla by reporting pages that show pop-ups like this.
             </header>
 
             <article>
-                Address of the page showing the pop-up:<br>
+                <label for="url">Address of the page showing the pop-up:</label><br>
                 <input type="text" id="url"><br>
-                What were you doing when you saw the pop-up (optional):<br>
-                <textarea rows="5"></textarea><br>
+                <label for="desc">What were you doing when you saw the pop-up (optional):</label><br>
+                <textarea rows="5" id="desc"></textarea><br>
                 <input type="submit" value="Report"> <span id="status"></span>
             </article>
         </div>

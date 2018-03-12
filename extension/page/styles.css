@@ -3,7 +3,6 @@ html {
     background: #ccc;
     font: menu;
     font-size: 12pt;
-    width: 800px;
 }
 #wrapper {
     display: grid;
@@ -15,9 +14,27 @@ html {
 }
 header, article {
     margin: 1em;
+    border-radius: 0.5em;
+    padding: 1em;
 }
-#url, textarea {
-    width: 100%;
+article {
+    background: white;
+}
+header {
+    color: white;
+    background: #191919;
+}
+header h3 {
+    margin-top: -0.4em;
+    background: #696969;
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+#url {
+    width: 22em;
+}
+textarea {
+    width: 22em;
 }
 footer {
     font-size: 0.8em;

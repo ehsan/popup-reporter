@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "In-Page Pop-up Reporter",
-    "version": "1.3",
+    "version": "1.4",
   
     "description": "Help curate a data set of pages that open in-page pop-ups by reporting the URLs of such pages as you encounter them.",
     "homepage_url": "https://github.com/ehsan/popup-reporter",
