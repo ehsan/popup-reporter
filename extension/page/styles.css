@@ -1,41 +1,33 @@
-html {
-    color: #181818;
-    background: #ccc;
-    font: menu;
-    font-size: 12pt;
+body {
+    width: 400px;
+    overflow-x: hidden;
 }
-#wrapper {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    margin-bottom: 3em;
-}
-#wrapper header div {
-    margin: 1em auto;
-}
-header, article {
-    margin: 1em;
-    border-radius: 0.5em;
-    padding: 1em;
-}
-article {
-    background: white;
-}
-header {
-    color: white;
-    background: #191919;
-}
-header h3 {
-    margin-top: -0.4em;
-    background: #696969;
-    border-radius: 0.5em;
-    padding: 0.5em;
-}
-#url {
-    width: 22em;
-}
+
 textarea {
-    width: 22em;
+    width: 100%;
+    height: 5em;
 }
-footer {
-    font-size: 0.8em;
+
+.panel-section-header * {
+    font-size: 14px !important;
+}
+
+h3 {
+    margin-block-start: 0;
+    margin-block-end: .25em;
+}
+
+textarea {
+    padding: 4px;
+}
+
+#favicon {
+    height: 16px;
+    width: 16px;
+    text-align: center;
+}
+
+label {
+    padding-inline-start: .5em;
+    text-align: center;
 }
