@@ -41,7 +41,10 @@ onload = function() {
       })
       .then(tab => {
           urlField.value = tab.url;
-          favicon.src = tab.favIconUrl;
+          if tab.favIconUrl {
+            favicon.src = tab.favIconUrl;
+            setTimeout(() => favicon.classList.add("loaded"), 10);
+        }
       });
 
     var submit = document.getElementById("report");

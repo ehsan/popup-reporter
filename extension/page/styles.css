@@ -21,9 +21,12 @@ textarea {
     padding: 4px;
 }
 
-#favicon {
+#favicon.loaded {
     height: 16px;
-    width: 16px;
+    width: 16px !important;
+}
+
+#favicon {
     text-align: center;
 }
 
