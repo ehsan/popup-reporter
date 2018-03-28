@@ -5,7 +5,7 @@
   "main": "background.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "firefox": "shx cp manifest.firefox.json manifest.json && web-ext build",
+    "firefox": "shx cp manifest.firefox.json manifest.json && web-ext build -c web-ext-config.firefox.js",
     "chrome": "shx cp manifest.chrome.json manifest.json && web-ext build -c web-ext-config.chrome.js"
   },
   "repository": {

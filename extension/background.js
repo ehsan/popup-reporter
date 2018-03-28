@@ -2,12 +2,6 @@ const FUNCTIONS_SUBDOMAIN = 'us-central1-orbital-hawk-197700';
 
 chrome.runtime.onMessage.addListener(notify);
 
-if (!this.browser) {
-    // Add chrome.
-    console.log("In Chrome!");
-    chrome.browserAction.setPopup({popup: "page/report.html?chrome=true"});
-}
-
 function getPlatformInfo() {
     try {
         return browser.runtime.getPlatformInfo();

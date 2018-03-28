@@ -19,6 +19,7 @@
     ],
   
     "page_action": {
+      "browser_style": true,
       "default_icon": {
         "16": "icons/icon.svg",
         "19": "icons/icon.svg",
@@ -38,6 +39,7 @@
     },
 
     "options_ui": {
+      "browser_style": true,
       "page": "options_ui/options.html"
     }
   }

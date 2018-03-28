@@ -1,8 +1,8 @@
 module.exports = {
+  artifactsDir: "chrome-artifacts",
   build: {
     overwriteDest: true,
   },
-  artifactsDir: "chrome-artifacts",
   ignoreFiles: [
     'icons/*.svg',
     'manifest.*.json',

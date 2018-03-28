@@ -1,3 +1,12 @@
+if (this.browser) {
+    // Disable the browser_style for Firefox, cause the browser gives us that.
+    document.styleSheets[0].disabled = true
+} else {
+    // Add the browser_style class for Chrome, to use the bundled stylesheet.
+    // document.body.classList.add("browser-style");
+}
+
+
 function getPlatformInfo() {
     try {
         return browser.runtime.getPlatformInfo();
@@ -41,7 +50,7 @@ onload = function() {
       })
       .then(tab => {
           urlField.value = tab.url;
-          if tab.favIconUrl {
+          if (tab.favIconUrl) {
             favicon.src = tab.favIconUrl;
             setTimeout(() => favicon.classList.add("loaded"), 10);
         }
