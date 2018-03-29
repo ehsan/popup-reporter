@@ -1,4 +1,5 @@
 module.exports = {
+  artifactsDir: "firefox-artifacts",
   build: {
     overwriteDest: true,
   },
