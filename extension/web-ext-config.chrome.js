@@ -4,7 +4,6 @@ module.exports = {
     overwriteDest: true,
   },
   ignoreFiles: [
-    'icons/*.svg',
     'manifest.*.json',
     'package*.json',
     'web-ext-config*.js',
