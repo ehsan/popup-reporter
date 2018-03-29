@@ -42,6 +42,4 @@ function notify(message) {
           });
       })
       .then(response => response.text())
-      .then(() => chrome.runtime.sendMessage({type: "success"}))
-      .catch(err => chrome.runtime.sendMessage({type: "error", err: err}));
 }

@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../browser_style.css">
         <link rel="stylesheet" href="styles.css">
         <title>In-Page Popup Reporter</title>
     </head>
     <body>
-        <div id="wrapper">
-            <header>
-                <h3>Are you tired of seeing in-page popups like this?</h3>
-                <div><img src="popup.jpg" width="335" height="224"></div>
-                Mozilla is experimenting with a popup blocker to dismiss them automatically, and are curating a dataset for it.
-                Help Mozilla by reporting pages that show pop-ups like this.
-            </header>
-
-            <article>
-                <label for="url">Address of the page showing the pop-up:</label><br>
-                <input type="text" id="url"><br>
-                <label for="desc">What were you doing when you saw the pop-up (optional):</label><br>
-                <textarea rows="5" id="desc"></textarea><br>
-                <input type="submit" value="Report"> <span id="status"></span>
-            </article>
+        <div class="panel-section panel-section-header">
+            <img class="icon-section-header" src="popup.jpg">
+            <div class="text-section-header">
+                <h3>Tired of seeing in-page popups?</h3>
+                Firefox is experimenting with a popup blocker to
+                automatically dismiss in-page popups and overlays.
+                Help us create a dataset by reporting any pages that
+                show annoying pop-ups.</div>
         </div>
 
-        <footer>
-            <div>Icon used for the extension made by <a href="https://www.flaticon.com/authors/smartline" title="Smartline">Smartline</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-        </footer>
+        <div class="panel-section panel-section-formElements">
+            <input type="text" id="url" hidden="true">
+            <div class="panel-formElements-item"><img class="icon" id="favicon"><label for="desc">What were you doing when you saw the pop-up on this page:</label></div>
+            <textarea class="panel-formElements-item" rows="5" id="desc" placeholder="This field is optional."></textarea>
+        </div>
+
+        <div class="panel-section panel-section-footer"><div class="panel-section-footer-button default" id="report">Report this Page</div</div>
+
         <script src="reporter.js"></script>
     </body>
 </html>

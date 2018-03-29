@@ -1,41 +1,40 @@
-html {
-    color: #181818;
-    background: #ccc;
-    font: menu;
-    font-size: 12pt;
+body {
+    overflow-x: hidden;
+    width: 400px;
 }
-#wrapper {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    margin-bottom: 3em;
-}
-#wrapper header div {
-    margin: 1em auto;
-}
-header, article {
-    margin: 1em;
-    border-radius: 0.5em;
-    padding: 1em;
-}
-article {
-    background: white;
-}
-header {
-    color: white;
-    background: #191919;
-}
-header h3 {
-    margin-top: -0.4em;
-    background: #696969;
-    border-radius: 0.5em;
-    padding: 0.5em;
-}
-#url {
-    width: 22em;
-}
+
 textarea {
-    width: 22em;
+    height: 5em;
+    width: 100%;
 }
-footer {
-    font-size: 0.8em;
+
+.panel-section-header * {
+    font-size: 14px !important;
+}
+
+h3 {
+    margin-bottom: .25em;
+    margin-top: 0;
+}
+
+textarea {
+    padding: 4px;
+    resize: none;
+}
+
+#favicon.loaded {
+    height: 16px;
+    width: 16px !important;
+    margin-right: 0;
+}
+
+#favicon {
+    text-align: center;
+    margin-right: -0.5em;
+}
+
+label {
+    font-size: 12px;
+    padding-left: .5em;
+    text-align: center;
 }

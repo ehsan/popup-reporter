@@ -26,6 +26,10 @@
 
     "background": {
       "scripts": ["background.js"]
+    },
+
+    "options_ui": {
+      "page": "options_ui/options.html"
     }
   
   }

@@ -1,0 +1,5 @@
+.firebaserc
+.vscode
+node_modules/
+extension/*artifacts/
+extension/manifest.json

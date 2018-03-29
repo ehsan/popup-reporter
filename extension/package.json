@@ -1,0 +1,30 @@
+{
+  "name": "popup-reporter",
+  "version": "1.5.0",
+  "description": "An extension to report in-page overlays and popups.",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "firefox": "shx cp manifest.firefox.json manifest.json && web-ext build -c web-ext-config.firefox.js",
+    "chrome": "shx cp manifest.chrome.json manifest.json && web-ext build -c web-ext-config.chrome.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehsan/popup-reporter.git"
+  },
+  "keywords": [
+    "add-on",
+    "web-ext",
+    "popup"
+  ],
+  "author": "Ehsan",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/ehsan/popup-reporter/issues"
+  },
+  "homepage": "https://github.com/ehsan/popup-reporter#readme",
+  "devDependencies": {
+    "shx": "^0.2.2",
+    "web-ext": "^2.5.0"
+  }
+}

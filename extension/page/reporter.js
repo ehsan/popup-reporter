@@ -1,3 +1,12 @@
+if (this.browser) {
+    // Disable the browser_style for Firefox, cause the browser gives us that.
+    document.styleSheets[0].disabled = true
+} else {
+    // Add the browser_style class for Chrome, to use the bundled stylesheet.
+    // document.body.classList.add("browser-style");
+}
+
+
 function getPlatformInfo() {
     try {
         return browser.runtime.getPlatformInfo();
@@ -24,6 +33,7 @@ function queryTabs(options) {
 
 onload = function() {
     var urlField = document.getElementById("url");
+    var favicon = document.getElementById("favicon");
     let options = {active: true};
     getPlatformInfo()
       .then(info => info.os)
@@ -35,42 +45,27 @@ onload = function() {
       })
       .then(tabs => {
           for (let tab of tabs) {
-              return tab.url;
+              return tab;
           }
       })
-      .then(url => urlField.value = url);
+      .then(tab => {
+          urlField.value = tab.url;
+          if (tab.favIconUrl) {
+            favicon.src = tab.favIconUrl;
+            setTimeout(() => favicon.classList.add("loaded"), 10);
+        }
+      });
 
-    var submit = document.querySelector("input[type=submit]");
+    var submit = document.getElementById("report");
     submit.onclick = function() {
         report();
         return false;
     };
 };
 
-chrome.runtime.onMessage.addListener(notify);
-
-function notify(message) {
-    let status = document.getElementById("status");
-    switch (message.type) {
-    case "success":
-        status.innerText = 'Done, thanks for your report!';
-        setTimeout(function() {
-            status.innerText = '';
-        }, 1000);
-        break;
-    case "error":
-        status.innerText = 'Error occurred: ' + message.err;
-        setTimeout(function() {
-            status.innerText = '';
-        }, 5000);
-        break;
-    }
-}
-
 function report() {
     let url = document.getElementById("url");
     let desc = document.querySelector("textarea");
-    let status = document.getElementById("status");
-    status.innerText = "Sending...";
     chrome.runtime.sendMessage({url: url.value, desc: desc.value, type:"fetch"});
+    window.close();
 }
