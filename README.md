@@ -36,7 +36,9 @@ firebase deploy --only functions
 # Build the extension
 cd ../..
 cd extension
-web-ext build
+npm install
+npm run firefox  # extension built in firefox-artifacts/
+npm run chrome   # extension built in chrome-artifacts/
 ```
 Once the functions are deployed, you need to visit this URL in your browser to authenticate your spreadsheet access on the Google Cloud side to ensure the extension will have access to update the spreadsheet: https://`{YOUR-FUNCTIONS-SUBDOMAIN}`.cloudfunctions.net/authGoogleAPI.
 
